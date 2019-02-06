@@ -1,0 +1,16 @@
+.notFound {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #808080;
+  box-shadow: 4px 4px 5px #acacac;
+}
+
+h2{
+  text-align: center;
+  color: #ff1f00;
+}

@@ -1,0 +1,84 @@
+
+.paginationBox{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 85px;
+  box-shadow: 0px 0px 10px 0px #000000 ;
+  border-top: 1px solid #261a00;
+  background-color: #000000;
+  font-family: sans-serif;
+  color:  #ffbf00;
+}
+
+.pageNumber {
+    padding : 10px 10px 0px 10px;
+    text-decoration: none;
+    color:  #ffbf00;
+    font-size: 17px;
+}
+
+.pageNumber:hover {
+    color:  #ebff05;
+    text-decoration: underline;
+}
+
+.pageNumberCurrent {
+    color:  #ff5732;
+    text-decoration: underline;
+}
+
+
+
+.perPage{
+  display: inline-block;
+  margin-left: 5px;
+  background-color: #1c1c1c;
+  border: 0;
+  color: #ffbf00;
+  height: 30px;
+  width: 40px;
+  font-size: 17px;
+  border-radius: 0;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  width: 100%;
+
+}
+
+.perPageWrap{
+    position: relative;
+    background-color: #1c1c1c;
+    width: 68px;
+}
+
+.perPageWrap::after{
+    content: '▼';
+    position: absolute;
+    pointer-events: none;
+    width: 20px;
+    height: 22px;
+    left: 47px;
+    bottom: 5px;
+    background: #1c1c1c;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.perPageWrap:hover::after{
+  color: #f42e02;
+}
+
+.paginationInnerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+}
+
+.perPageLabel {
+  font-size: 15px;
+  padding: 0px 5px 0px 10px;
+  color:  #ffbf00;
+}

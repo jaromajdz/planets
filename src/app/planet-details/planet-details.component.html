@@ -1,0 +1,36 @@
+<header>
+      <!--Search Bar-->
+      <div class="searchBar">
+          <div class="searchBackBox">
+              <button class="backButton" (click)="goBack()">🡄</button>
+          </div>
+          <div class="searchLabelBox name">
+              Planet:
+          </div>
+          <div class="searchInputBox planet">
+            {{ details[0].param }}
+          </div>
+        </div>
+
+   </header>
+   <!--Planets-->
+    <main>
+      <div class="container">
+        <div class="marginBox"></div>
+
+          <div class="planetsBox">
+              <div class="planetOutline" *ngFor="let detail of details|slice:1:9">
+                  <div class="planetLabel"> {{detail.type}}:</div>
+                  <div class="planetProperty">{{detail.param}}</div>
+                </div>
+          </div>
+
+        <div class="marginBox"></div>
+
+      </div>
+    </main>
+<!--Pagination -->
+
+  <div class="paginationBox">
+
+  </div>

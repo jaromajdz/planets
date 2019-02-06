@@ -1,0 +1,154 @@
+/* header search bar */
+
+.searchBar {
+  display: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #ba7b01;
+  box-shadow: 0px 0px 10px 0px #000000 ;
+  background-color: #121212;
+}
+
+.searchLabelBox {
+  flex: 2 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  box-sizing: border-box;
+  color: #ffa800;
+}
+
+.searchBackBox{
+  flex: 1 0 50px;;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.backButton {
+  font-size: 55px;
+  height: 60px;
+  width: 60px;
+  color: #ffa800;
+  background: transparent;
+  border: none;
+}
+
+.backButton:hover {
+  color: #f42e02;
+}
+
+.searchInputBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 6 0 auto;
+
+}
+
+.name{
+  color: #ffa800;
+  align-items:flex-end;
+  padding-bottom: 18px
+}
+
+.planet{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #ffa800;
+  align-items:flex-end;
+  padding-bottom: 15px
+}
+
+
+
+@media only screen and (max-width: 550px){
+  .searchBar{
+    flex-flow: column;
+    height: auto;
+  }
+  .searchInputBox {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchLabelBox {
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .backButton {
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    color: #ffa800;
+    background: transparent;
+    border: none;
+  }
+
+}
+
+
+/* main content planets */
+
+.container {
+  display: flex;
+  margin-top: 30px;
+  font-family: 'Actor', sans-serif;
+  margin-bottom: 100px;
+ }
+
+.marginBox {
+  flex: 2 0 auto;
+
+}
+
+.planetsBox {
+  flex: 8 3 auto;
+}
+
+.planetOutline{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+  margin-top: 3px;
+  align-items: center;
+  height: 45px;
+  color:  #ffbf00;
+  text-decoration: none;
+  background-color: #1d1d1d;
+  border-bottom: 1px solid #4b3200;
+  box-shadow: 1px 1px 2px 0px #131313;
+}
+
+
+
+.planetProperty{
+  flex: 5 0 auto;
+  }
+
+.planetLabel{
+  flex: 1 0 120px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+/*--Pagination footer --> */
+
+.paginationBox{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 85px;
+  box-shadow: 0px 0px 10px 0px #000000 ;
+  border-top: 1px solid #261a00;
+  background-color: #000000;
+  font-family: sans-serif;
+  color:  #ffbf00;
+}

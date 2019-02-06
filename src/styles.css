@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  background-color: #3e403e;
+  font-family: 'Coustard', serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 20px;
+  overflow-y: auto;
+}

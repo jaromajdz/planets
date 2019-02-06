@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  font-family: 'Actor', sans-serif;
+}
+
+.marginBox {
+  flex: 2 0 auto;
+}
+
+.planetsBox {
+  flex: 8 3 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.onePlanet{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+  margin-top: 3px;
+  align-items: center;
+  height: 45px;
+  color:  #ffbf00;
+  text-decoration: none;
+  background-color: #1d1d1d;
+
+  border-bottom: 1px solid #4b3200;
+  box-shadow: 1px 1px 2px 0px #131313;
+}
+.onePlanet:hover {
+  background-color: #252525;
+  border-bottom: 1px solid #ba4f01;
+  box-shadow: 0px 0px 10px 0px #444444;
+  color: #ffe605;
+}
+
+.onePlanet:active {
+  background-color: #1d1d1d;
+  border-bottom: 1px solid #ba4f01;
+  box-shadow: 0px 0px 10px 0px #9f7800;
+}

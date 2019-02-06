@@ -1,0 +1,31 @@
+<!--Pagination -->
+  <div class="paginationBox">
+  <div class="paginationInnerBox">
+    <a class="pageNumber" [routerLink]="['/planets/1']"><<</a>
+    <a class="pageNumber" [routerLink]="['/planets/'+getPrevious()]"><</a>
+
+    <a class="pageNumber" [routerLink]="['/planets/' + num]"
+      *ngFor="let num of pagination.returnRange()|slice:bStartIndex:bEndIndex"
+      [ngClass]="{'pageNumberCurrent': num===currentPage}"
+      >
+        {{ num }}
+      </a>
+
+
+    <a class="pageNumber" [routerLink]="['/planets/'+getNext()]">></a>
+    <a class="pageNumber" [routerLink]="['/planets/' + numberOfPages()]">>></a>
+ </div>
+
+<div class="paginationInnerBox" style="background-color:#343434;">
+  <label class="perPageLabel">Shows</label>
+  <div class="perPageWrap">
+     <select class="perPage" (input)="onChangePerPage($event)" [(ngModel)]="itemsPerPage">
+       <option
+       *ngFor="let item of dropDown" [value]="item">
+       {{item}}
+     </option>
+    </select>
+  </div>
+    <label class="perPageLabel">planets par page.</label>
+  </div>
+  </div>
