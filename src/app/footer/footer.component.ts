@@ -37,7 +37,6 @@ export class FooterComponent implements OnInit {
       this.route.params.subscribe(
       params=>{
         this.id = +params['id'] ? +params['id'] : this.currentPage;
-
         if(this.planets.getNumberOfItems()>0){
           this.pagination.changePagination(this.id, this.planets.getNumberOfItems())
         }
@@ -66,6 +65,7 @@ export class FooterComponent implements OnInit {
   }
 
   onChangePerPage(event){
+    console.log('Fotter component zmieniam ilosc na strone', event.target.value)
     this.pagination.onChangeItemsPerPage(+event.target.value, this.planets.getNumberOfItems())
   }
 }

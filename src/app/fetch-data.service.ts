@@ -13,7 +13,7 @@ export class FetchDataService {
     return this.http
           .get(url)
           .pipe(
-            timeout(3000),
+            timeout(5000),
             map((response)=>response.json())
           );
 

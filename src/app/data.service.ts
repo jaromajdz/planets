@@ -67,12 +67,12 @@ private planetsData = new BehaviorSubject<any>(
       )
 
     }else {
+      this._loading =  false;
+      this._allData = true;
       this.sendAllPlanets();
       this.sortItems();
       //this.sendNumberOfItems();
-      this._loading =  false;
-      this._allData = true;
-  }
+        }
 }
 
  sortItems(){
@@ -95,11 +95,13 @@ private planetsData = new BehaviorSubject<any>(
        b.name.toLowerCase();
        let an = a.name.indexOf(search);
        let bn = b.name.indexOf(search);
+
        if(an < bn)
            return -1;
-       if(an > bn)
+       if(bn < an)
            return 1;
       return 0
+      //return a - b
      }
    )
   }

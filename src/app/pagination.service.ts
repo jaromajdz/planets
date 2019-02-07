@@ -50,10 +50,7 @@ private _memPage: number = 0;
         this._currentPage = pageNumber;
       //number of Pages
       this.range(1, this._numberOfPages)
-
-
-      //pagination bar
-
+       //pagination bar
       let ppages = Math.ceil(pageNumber/7 )
       let ppagesTotal = Math.ceil(this._numberOfPages/7 )
 
@@ -83,18 +80,18 @@ private _memPage: number = 0;
 
   onChangeItemsPerPage(newItemsPerPage: number, totalItems: number){
 
-     const currentPage: number = Math.ceil((this._currentPage * this._itemsPerPage) /newItemsPerPage)
+     const currentPage: number = Math.ceil(((this._currentPage -1)  * this._itemsPerPage) /newItemsPerPage)
 
-     /*
      if(this._currentPage===1){
        this._currentPage = 1
      }else {
-       this._itemsPerPage = currentPage
-     } */
-
-     this.changePagination(currentPage, totalItems)
+       this._currentPage = currentPage
+     }
+     console.log('Inside onchange items per page')
+     this._itemsPerPage = newItemsPerPage
+     this.changePagination(this._currentPage, totalItems)
      //is not the best place but change for current page
-     this.router.navigateByUrl('/planets/' + currentPage)
+     this.router.navigateByUrl('/planets/' + this._currentPage)
   }
 
   range(lowN: number, highN: number){

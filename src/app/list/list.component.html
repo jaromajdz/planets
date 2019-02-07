@@ -1,9 +1,13 @@
 <app-search></app-search>
 <main>
     <div class="container">
-      <div class="marginBox"></div>
+      <div class="marginBox">
+      </div>
 
-        <div class="planetsBox">
+          <div class="planetsBox">
+            <a class="onePlanet" style="color: #be0000;" *ngIf="loading">
+              Data is still loading. Please, wait a minuet!
+            </a>
               <a class="onePlanet" [routerLink]="[goThere(planet.url)]"
               *ngFor="let planet of currentPlanets|slice:startIndex:endIndex">
                 {{planet.name}}

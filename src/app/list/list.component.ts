@@ -35,6 +35,7 @@ loading: boolean = false;
       this.pagination.getPagination()
       .subscribe (
         data=>{
+          console.log('List component zmiana paginacji', data)
           this.currentPage =  data.currentPage;
           this.startIndex = data.startIndex;
           this.endIndex = data.endIndex;
